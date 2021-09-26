@@ -33,6 +33,11 @@ namespace Above_Premiere
             MessageBox.Show(message,title,MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        public void hideForm()
+        {
+            this.Hide();
+        }
+
 
         public string getTextBoxUserName()
         {

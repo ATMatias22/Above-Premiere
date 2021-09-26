@@ -63,7 +63,7 @@ namespace Above_Premiere
             this.panelPrinciapl.TabIndex = 1;
             // 
             // btnTogglePassword
-            // 
+            //
             this.btnTogglePassword.Image = global::Above_Premiere.Properties.Resources.invisible_eye;
             this.btnTogglePassword.Location = new System.Drawing.Point(298, 232);
             this.btnTogglePassword.Name = "btnTogglePassword";
