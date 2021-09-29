@@ -11,11 +11,18 @@ namespace Above_Premiere.View
 
         Panel choosenPanel;
         User userLogin;
-        public ViewApplicationMenu(User userLogin)
+        FrameLogin mainView;
+        bool isBtnLogout;
+
+
+        public ViewApplicationMenu(User userLogin, FrameLogin mainView)
         {
             this.userLogin = userLogin;
+            this.mainView = mainView;
+            this.isBtnLogout = false;
             InitializeComponent();
             setTitleHeader();
+            this.Show();
         }
 
         private void setTitleHeader()
@@ -41,6 +48,22 @@ namespace Above_Premiere.View
                 tb.Text = openFileDialog1.FileName;
             }
         }
+
+        private string path()
+        {
+            string path;
+            FolderBrowserDialog folder = new FolderBrowserDialog();
+            if (folder.ShowDialog() == DialogResult.OK)
+            {
+                path = folder.SelectedPath;
+            }
+            else
+            {
+                throw new SystemException("Cancelaste la accion");
+            }
+            return path;
+        }
+
 
 
 
@@ -69,28 +92,16 @@ namespace Above_Premiere.View
             setPanel(this.PanelBodyChoosenOptionFive);
         }
 
-        private string ruta()
-        {
-            string rutas = "";
-            FolderBrowserDialog folder = new FolderBrowserDialog();
-            if (folder.ShowDialog() == DialogResult.OK)
-            {
-                rutas = folder.SelectedPath;
-            }
-            else
-            {
-                throw new SystemException("Se cancelo");
-            }
-            return rutas;
-        }
+       
 
-
-        public void convertir(string comando)
+        public void executeCommand(string command)
         {
 
-            ProcessStartInfo startInfo = new ProcessStartInfo("cmd.exe");
-            startInfo.WindowStyle = ProcessWindowStyle.Minimized;
-            startInfo.Arguments = comando;
+            ProcessStartInfo startInfo = new ProcessStartInfo("cmd.exe")
+            {
+                WindowStyle = ProcessWindowStyle.Minimized,
+                Arguments = command
+            };
 
             using (Process exeProcess = Process.Start(startInfo))
             {
@@ -104,15 +115,14 @@ namespace Above_Premiere.View
 
 
 
-
         private void ButtonExecuteChoosenOptionFour_Click(object sender, EventArgs e)
         {
             string extension = Path.GetExtension($@"{this.TextBoxPathVideoChoosenOptionFour.Text}");
             try
             {
-                string r = ruta();
-                string comando = $"/c ffmpeg -i {this.TextBoxPathVideoChoosenOptionFour.Text} -s {this.TextBoxWidthChoosenOptionFour.Text}x{this.TextBoxHeightChoosenOptionFour.Text} {r}\\{this.TextBoxNewNameChoosenOptionFour.Text}{extension}";
-                convertir(comando);
+                string r = path();
+                string command = $"/c ffmpeg -i {this.TextBoxPathVideoChoosenOptionFour.Text} -s {this.TextBoxWidthChoosenOptionFour.Text}x{this.TextBoxHeightChoosenOptionFour.Text} {r}\\{this.TextBoxNewNameChoosenOptionFour.Text}{extension}";
+                executeCommand(command);
             }
             catch (Exception ex)
             {
@@ -122,13 +132,12 @@ namespace Above_Premiere.View
 
         private void ButtonExecuteChoosenOptionFive_Click(object sender, EventArgs e)
         {
-            
-            string extension = Path.GetExtension($@"{this.TextBoxPathVideoChoosenOptionThree.Text}");
+
             try
             {
-                string r = ruta();
-                string comando = $"/c ffmpeg -i {this.TextBoxPathVideoChoosenOptionFive.Text} -y -an -r {this.TextBoxNumberOfPhotosChoosenOptionFive.Text} {r}\\{this.TextBoxNewNameChoosenOptionFive.Text}%d.png";
-                convertir(comando);
+                string r = path();
+                string command = $"/c ffmpeg -i {this.TextBoxPathVideoChoosenOptionFive.Text} -y -an -r {this.TextBoxNumberOfPhotosChoosenOptionFive.Text} {r}\\{this.TextBoxNewNameChoosenOptionFive.Text}%d.png";
+                executeCommand(command);
             }
             catch (Exception ex)
             {
@@ -143,9 +152,9 @@ namespace Above_Premiere.View
             string extension = Path.GetExtension($@"{this.TextBoxPathVideoChoosenOptionThree.Text}");
             try
             {
-                string r = ruta();
-                string comando = $"/c ffmpeg -i {this.TextBoxPathVideoChoosenOptionThree.Text} -c copy -an {r}\\{this.TextBoxNewNameChoosenOptionThree.Text}{extension}";
-                convertir(comando);
+                string r = path();
+                string command = $"/c ffmpeg -i {this.TextBoxPathVideoChoosenOptionThree.Text} -c copy -an {r}\\{this.TextBoxNewNameChoosenOptionThree.Text}{extension}";
+                executeCommand(command);
             }
             catch (Exception ex)
             {
@@ -156,11 +165,11 @@ namespace Above_Premiere.View
 
         private void ButtonExecuteChoosenOptionTwo_Click(object sender, EventArgs e)
         {
-             try
+            try
             {
-                string r = ruta();
-                string comando = $"/c ffmpeg -i {this.TextBoxPathVideoChoosenOptionTwo.Text} -vn -acodec mp3 {r}\\{this.TextBoxNewNameChoosenOptionTwo.Text}.mp3";
-                convertir(comando);
+                string r = path();
+                string command = $"/c ffmpeg -i {this.TextBoxPathVideoChoosenOptionTwo.Text} -vn -acodec mp3 {r}\\{this.TextBoxNewNameChoosenOptionTwo.Text}.mp3";
+                executeCommand(command);
             }
             catch (Exception ex)
             {
@@ -170,20 +179,17 @@ namespace Above_Premiere.View
 
         private void ButtonExecuteChoosenOptionOne_Click(object sender, EventArgs e)
         {
-
-            string selectedItem = ComboBoxVideoFormatChoosenOptionOne.SelectedItem.ToString() ;
-
+            string selectedItem = ComboBoxVideoFormatChoosenOptionOne.SelectedItem.ToString();
             try
             {
-                string r = ruta();
-                string comando = $"/c ffmpeg -i {this.TextBoxPathVideoChoosenOptionOne.Text} {r}\\{this.TextBoxNewNameChoosenOptionOne.Text}.{selectedItem}";
-                convertir(comando);
+                string r = path();
+                string command = $"/c ffmpeg -i {this.TextBoxPathVideoChoosenOptionOne.Text} {r}\\{this.TextBoxNewNameChoosenOptionOne.Text}.{selectedItem}";
+                executeCommand(command);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-           
         }
 
 
@@ -215,6 +221,49 @@ namespace Above_Premiere.View
         private void ButtonSearchVideoChoosenOptionFive_Click(object sender, EventArgs e)
         {
             setPathInTextBox(TextBoxPathVideoChoosenOptionFive);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void ViewApplicationMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!this.isBtnLogout)
+            {
+                DialogResult dialogo = MessageBox.Show("¿Está seguro de cerrar la aplicacion?",
+                    "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogo == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void ViewApplicationMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!this.isBtnLogout)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            this.isBtnLogout = true;
+            mainView.Show();
+            this.Close();
+
         }
     }
 }

@@ -159,6 +159,7 @@ namespace Above_Premiere.View
             this.BtnLogout.Size = new System.Drawing.Size(50, 50);
             this.BtnLogout.TabIndex = 0;
             this.BtnLogout.UseVisualStyleBackColor = true;
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // PanelHeaderTitle
             // 
@@ -674,8 +675,6 @@ namespace Above_Premiere.View
             this.ComboBoxVideoFormatChoosenOptionOne.Name = "ComboBoxVideoFormatChoosenOptionOne";
             this.ComboBoxVideoFormatChoosenOptionOne.Size = new System.Drawing.Size(165, 26);
             this.ComboBoxVideoFormatChoosenOptionOne.TabIndex = 3;
-            this.ComboBoxVideoFormatChoosenOptionOne.SelectedIndex = 0;
-
             // 
             // LabelComboBoxChoosenOptionOne
             // 
@@ -815,8 +814,11 @@ namespace Above_Premiere.View
             this.ClientSize = new System.Drawing.Size(901, 451);
             this.Controls.Add(this.PanelBody);
             this.Controls.Add(this.PanelHeader);
+            this.MaximizeBox = false;
             this.Name = "ViewApplicationMenu";
             this.Text = "ViewApplicationMenu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ViewApplicationMenu_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewApplicationMenu_FormClosed);
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeaderLogo.ResumeLayout(false);
             this.PanelHeaderTitle.ResumeLayout(false);

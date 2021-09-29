@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Above_Premiere
@@ -33,11 +26,15 @@ namespace Above_Premiere
             MessageBox.Show(message,title,MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public void hideForm()
+        public void hideView()
         {
             this.Hide();
         }
 
+        public void closeView()
+        {
+            this.Close();
+        }
 
         public string getTextBoxUserName()
         {
@@ -49,6 +46,11 @@ namespace Above_Premiere
             return this.textBoxPassword.Text;
         }
 
+        public void clearCredentials()
+        {
+            this.textBoxUser.Clear();
+            this.textBoxPassword.Clear();
+        }
 
 
 

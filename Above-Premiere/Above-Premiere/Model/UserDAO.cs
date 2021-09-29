@@ -1,9 +1,6 @@
 ﻿using Above_Premiere.Excepciones;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Above_Premiere.Modelo
 {
@@ -17,8 +14,6 @@ namespace Above_Premiere.Modelo
             this.users = new List<User>();
             createUser();
         }
-
-
 
         private void createUser()
         {
@@ -53,7 +48,7 @@ namespace Above_Premiere.Modelo
 
             if(userFound == null)
             {
-                throw new IncorrectCredentialsException("Some of your credentials are wrong");
+                throw new IncorrectCredentialsException("Alguna de sus credenciales son incorrectas");
             }
 
             return userFound;
