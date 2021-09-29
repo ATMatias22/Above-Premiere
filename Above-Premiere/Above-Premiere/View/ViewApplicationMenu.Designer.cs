@@ -79,17 +79,6 @@ namespace Above_Premiere.View
             this.TextBoxPathVideoChoosenOptionTwo = new System.Windows.Forms.TextBox();
             this.PanelHeaderBodyChoosenOptionTwo = new System.Windows.Forms.Panel();
             this.PanelHeaderBodyTitleChoosenOptionTwo = new System.Windows.Forms.Label();
-            this.PanelBodyChoosenOptionOne = new System.Windows.Forms.Panel();
-            this.PanelMainBodyChoosenOptionOne = new System.Windows.Forms.Panel();
-            this.ButtonExecuteChoosenOptionOne = new System.Windows.Forms.Button();
-            this.TextBoxNewNameChoosenOptionOne = new System.Windows.Forms.TextBox();
-            this.ComboBoxVideoFormatChoosenOptionOne = new System.Windows.Forms.ComboBox();
-            this.LabelComboBoxChoosenOptionOne = new System.Windows.Forms.Label();
-            this.LabelTextBoxNewNameChoosenOptionOne = new System.Windows.Forms.Label();
-            this.ButtonSearchVideoChoosenOptionOne = new System.Windows.Forms.Button();
-            this.TextBoxPathVideoChoosenOptionOne = new System.Windows.Forms.TextBox();
-            this.PanelHeaderBodyChoosenOptionOne = new System.Windows.Forms.Panel();
-            this.PanelHeaderBodyTitleChoosenOptionOne = new System.Windows.Forms.Label();
             this.PanelBodyOptionMenu = new System.Windows.Forms.Panel();
             this.ButtonOptionFive = new System.Windows.Forms.Button();
             this.ButtonOptionFour = new System.Windows.Forms.Button();
@@ -114,9 +103,6 @@ namespace Above_Premiere.View
             this.PanelBodyChoosenOptionTwo.SuspendLayout();
             this.PanelMainBodyChoosenOptionTwo.SuspendLayout();
             this.PanelHeaderBodyChoosenOptionTwo.SuspendLayout();
-            this.PanelBodyChoosenOptionOne.SuspendLayout();
-            this.PanelMainBodyChoosenOptionOne.SuspendLayout();
-            this.PanelHeaderBodyChoosenOptionOne.SuspendLayout();
             this.PanelBodyOptionMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -197,7 +183,6 @@ namespace Above_Premiere.View
             this.PanelBodyTemplateChoosenOptions.Controls.Add(this.PanelBodyChoosenOptionFive);
             this.PanelBodyTemplateChoosenOptions.Controls.Add(this.PanelBodyChoosenOptionThree);
             this.PanelBodyTemplateChoosenOptions.Controls.Add(this.PanelBodyChoosenOptionTwo);
-            this.PanelBodyTemplateChoosenOptions.Controls.Add(this.PanelBodyChoosenOptionOne);
             this.PanelBodyTemplateChoosenOptions.Location = new System.Drawing.Point(172, 0);
             this.PanelBodyTemplateChoosenOptions.Name = "PanelBodyTemplateChoosenOptions";
             this.PanelBodyTemplateChoosenOptions.Size = new System.Drawing.Size(728, 360);
@@ -619,122 +604,6 @@ namespace Above_Premiere.View
             this.PanelHeaderBodyTitleChoosenOptionTwo.TabIndex = 0;
             this.PanelHeaderBodyTitleChoosenOptionTwo.Text = "Extraer el audio de un video en formato .mp3";
             // 
-            // PanelBodyChoosenOptionOne
-            // 
-            this.PanelBodyChoosenOptionOne.Controls.Add(this.PanelMainBodyChoosenOptionOne);
-            this.PanelBodyChoosenOptionOne.Controls.Add(this.PanelHeaderBodyChoosenOptionOne);
-            this.PanelBodyChoosenOptionOne.Location = new System.Drawing.Point(0, 0);
-            this.PanelBodyChoosenOptionOne.Name = "PanelBodyChoosenOptionOne";
-            this.PanelBodyChoosenOptionOne.Size = new System.Drawing.Size(728, 360);
-            this.PanelBodyChoosenOptionOne.TabIndex = 1;
-            this.PanelBodyChoosenOptionOne.Visible = false;
-            // 
-            // PanelMainBodyChoosenOptionOne
-            // 
-            this.PanelMainBodyChoosenOptionOne.Controls.Add(this.ButtonExecuteChoosenOptionOne);
-            this.PanelMainBodyChoosenOptionOne.Controls.Add(this.TextBoxNewNameChoosenOptionOne);
-            this.PanelMainBodyChoosenOptionOne.Controls.Add(this.ComboBoxVideoFormatChoosenOptionOne);
-            this.PanelMainBodyChoosenOptionOne.Controls.Add(this.LabelComboBoxChoosenOptionOne);
-            this.PanelMainBodyChoosenOptionOne.Controls.Add(this.LabelTextBoxNewNameChoosenOptionOne);
-            this.PanelMainBodyChoosenOptionOne.Controls.Add(this.ButtonSearchVideoChoosenOptionOne);
-            this.PanelMainBodyChoosenOptionOne.Controls.Add(this.TextBoxPathVideoChoosenOptionOne);
-            this.PanelMainBodyChoosenOptionOne.Location = new System.Drawing.Point(0, 69);
-            this.PanelMainBodyChoosenOptionOne.Name = "PanelMainBodyChoosenOptionOne";
-            this.PanelMainBodyChoosenOptionOne.Size = new System.Drawing.Size(728, 291);
-            this.PanelMainBodyChoosenOptionOne.TabIndex = 1;
-            // 
-            // ButtonExecuteChoosenOptionOne
-            // 
-            this.ButtonExecuteChoosenOptionOne.Location = new System.Drawing.Point(282, 233);
-            this.ButtonExecuteChoosenOptionOne.Name = "ButtonExecuteChoosenOptionOne";
-            this.ButtonExecuteChoosenOptionOne.Size = new System.Drawing.Size(146, 25);
-            this.ButtonExecuteChoosenOptionOne.TabIndex = 6;
-            this.ButtonExecuteChoosenOptionOne.Text = "Convetir";
-            this.ButtonExecuteChoosenOptionOne.UseVisualStyleBackColor = true;
-            this.ButtonExecuteChoosenOptionOne.Click += new System.EventHandler(this.ButtonExecuteChoosenOptionOne_Click);
-            // 
-            // TextBoxNewNameChoosenOptionOne
-            // 
-            this.TextBoxNewNameChoosenOptionOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxNewNameChoosenOptionOne.Location = new System.Drawing.Point(388, 159);
-            this.TextBoxNewNameChoosenOptionOne.Name = "TextBoxNewNameChoosenOptionOne";
-            this.TextBoxNewNameChoosenOptionOne.Size = new System.Drawing.Size(251, 26);
-            this.TextBoxNewNameChoosenOptionOne.TabIndex = 5;
-            // 
-            // ComboBoxVideoFormatChoosenOptionOne
-            // 
-            this.ComboBoxVideoFormatChoosenOptionOne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBoxVideoFormatChoosenOptionOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBoxVideoFormatChoosenOptionOne.FormattingEnabled = true;
-            this.ComboBoxVideoFormatChoosenOptionOne.Items.AddRange(new object[] {
-            "mp4",
-            "avi",
-            "mpeg",
-            "flv"});
-            this.ComboBoxVideoFormatChoosenOptionOne.Location = new System.Drawing.Point(388, 99);
-            this.ComboBoxVideoFormatChoosenOptionOne.Name = "ComboBoxVideoFormatChoosenOptionOne";
-            this.ComboBoxVideoFormatChoosenOptionOne.Size = new System.Drawing.Size(165, 26);
-            this.ComboBoxVideoFormatChoosenOptionOne.TabIndex = 3;
-            // 
-            // LabelComboBoxChoosenOptionOne
-            // 
-            this.LabelComboBoxChoosenOptionOne.AutoSize = true;
-            this.LabelComboBoxChoosenOptionOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelComboBoxChoosenOptionOne.Location = new System.Drawing.Point(110, 102);
-            this.LabelComboBoxChoosenOptionOne.Name = "LabelComboBoxChoosenOptionOne";
-            this.LabelComboBoxChoosenOptionOne.Size = new System.Drawing.Size(238, 18);
-            this.LabelComboBoxChoosenOptionOne.TabIndex = 2;
-            this.LabelComboBoxChoosenOptionOne.Text = "Seleccione formato que quiera";
-            // 
-            // LabelTextBoxNewNameChoosenOptionOne
-            // 
-            this.LabelTextBoxNewNameChoosenOptionOne.AutoSize = true;
-            this.LabelTextBoxNewNameChoosenOptionOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTextBoxNewNameChoosenOptionOne.Location = new System.Drawing.Point(110, 149);
-            this.LabelTextBoxNewNameChoosenOptionOne.Name = "LabelTextBoxNewNameChoosenOptionOne";
-            this.LabelTextBoxNewNameChoosenOptionOne.Size = new System.Drawing.Size(251, 36);
-            this.LabelTextBoxNewNameChoosenOptionOne.TabIndex = 4;
-            this.LabelTextBoxNewNameChoosenOptionOne.Text = "Coloque el nombre que quiera \r\nque tenga el video a transformar";
-            // 
-            // ButtonSearchVideoChoosenOptionOne
-            // 
-            this.ButtonSearchVideoChoosenOptionOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSearchVideoChoosenOptionOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonSearchVideoChoosenOptionOne.Location = new System.Drawing.Point(434, 27);
-            this.ButtonSearchVideoChoosenOptionOne.Name = "ButtonSearchVideoChoosenOptionOne";
-            this.ButtonSearchVideoChoosenOptionOne.Size = new System.Drawing.Size(75, 26);
-            this.ButtonSearchVideoChoosenOptionOne.TabIndex = 1;
-            this.ButtonSearchVideoChoosenOptionOne.Text = "Search";
-            this.ButtonSearchVideoChoosenOptionOne.UseVisualStyleBackColor = true;
-            this.ButtonSearchVideoChoosenOptionOne.Click += new System.EventHandler(this.ButtonSearchVideoChoosenOptionOne_Click);
-            // 
-            // TextBoxPathVideoChoosenOptionOne
-            // 
-            this.TextBoxPathVideoChoosenOptionOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxPathVideoChoosenOptionOne.Location = new System.Drawing.Point(177, 27);
-            this.TextBoxPathVideoChoosenOptionOne.Name = "TextBoxPathVideoChoosenOptionOne";
-            this.TextBoxPathVideoChoosenOptionOne.ReadOnly = true;
-            this.TextBoxPathVideoChoosenOptionOne.Size = new System.Drawing.Size(251, 26);
-            this.TextBoxPathVideoChoosenOptionOne.TabIndex = 0;
-            // 
-            // PanelHeaderBodyChoosenOptionOne
-            // 
-            this.PanelHeaderBodyChoosenOptionOne.Controls.Add(this.PanelHeaderBodyTitleChoosenOptionOne);
-            this.PanelHeaderBodyChoosenOptionOne.Location = new System.Drawing.Point(0, 0);
-            this.PanelHeaderBodyChoosenOptionOne.Name = "PanelHeaderBodyChoosenOptionOne";
-            this.PanelHeaderBodyChoosenOptionOne.Size = new System.Drawing.Size(728, 72);
-            this.PanelHeaderBodyChoosenOptionOne.TabIndex = 0;
-            // 
-            // PanelHeaderBodyTitleChoosenOptionOne
-            // 
-            this.PanelHeaderBodyTitleChoosenOptionOne.AutoSize = true;
-            this.PanelHeaderBodyTitleChoosenOptionOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelHeaderBodyTitleChoosenOptionOne.Location = new System.Drawing.Point(220, 22);
-            this.PanelHeaderBodyTitleChoosenOptionOne.Name = "PanelHeaderBodyTitleChoosenOptionOne";
-            this.PanelHeaderBodyTitleChoosenOptionOne.Size = new System.Drawing.Size(277, 25);
-            this.PanelHeaderBodyTitleChoosenOptionOne.TabIndex = 0;
-            this.PanelHeaderBodyTitleChoosenOptionOne.Text = "Cambiar formato a un video";
-            // 
             // PanelBodyOptionMenu
             // 
             this.PanelBodyOptionMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -845,11 +714,6 @@ namespace Above_Premiere.View
             this.PanelMainBodyChoosenOptionTwo.PerformLayout();
             this.PanelHeaderBodyChoosenOptionTwo.ResumeLayout(false);
             this.PanelHeaderBodyChoosenOptionTwo.PerformLayout();
-            this.PanelBodyChoosenOptionOne.ResumeLayout(false);
-            this.PanelMainBodyChoosenOptionOne.ResumeLayout(false);
-            this.PanelMainBodyChoosenOptionOne.PerformLayout();
-            this.PanelHeaderBodyChoosenOptionOne.ResumeLayout(false);
-            this.PanelHeaderBodyChoosenOptionOne.PerformLayout();
             this.PanelBodyOptionMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -864,17 +728,6 @@ namespace Above_Premiere.View
         private System.Windows.Forms.Label LabelHeaderLogo;
         private System.Windows.Forms.Button BtnLogout;
         private System.Windows.Forms.Panel PanelBody;
-        private System.Windows.Forms.Panel PanelBodyChoosenOptionOne;
-        private System.Windows.Forms.Panel PanelMainBodyChoosenOptionOne;
-        private System.Windows.Forms.Button ButtonExecuteChoosenOptionOne;
-        private System.Windows.Forms.TextBox TextBoxNewNameChoosenOptionOne;
-        private System.Windows.Forms.ComboBox ComboBoxVideoFormatChoosenOptionOne;
-        private System.Windows.Forms.Label LabelComboBoxChoosenOptionOne;
-        private System.Windows.Forms.Label LabelTextBoxNewNameChoosenOptionOne;
-        private System.Windows.Forms.Button ButtonSearchVideoChoosenOptionOne;
-        private System.Windows.Forms.TextBox TextBoxPathVideoChoosenOptionOne;
-        private System.Windows.Forms.Panel PanelHeaderBodyChoosenOptionOne;
-        private System.Windows.Forms.Label PanelHeaderBodyTitleChoosenOptionOne;
         private System.Windows.Forms.Panel PanelBodyOptionMenu;
         private System.Windows.Forms.Button ButtonOptionFive;
         private System.Windows.Forms.Button ButtonOptionFour;

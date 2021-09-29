@@ -55,6 +55,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="View\OptionPanels\ChangeFormatToVideoOptionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\OptionPanels\OptionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\ViewApplicationMenu.cs">
       <SubType>Form</SubType>
     </Compile>

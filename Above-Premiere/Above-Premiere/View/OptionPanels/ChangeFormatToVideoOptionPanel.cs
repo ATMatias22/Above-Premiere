@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using System.Windows.Forms;
 
 namespace Above_Premiere.View.OptionPanels
@@ -17,12 +13,16 @@ namespace Above_Premiere.View.OptionPanels
         {
             this.LabelComboBox = new Label();
             this.ComboBoxVideoFormat = new ComboBox();
-
+            setOwnStyles();
+            this.Show();
 
         }
 
         public override void setOwnStyles()
         {
+            this.Controls.Add(LabelComboBox);
+            this.Controls.Add(ComboBoxVideoFormat);
+
             this.TitlePanelHeader.Location = new System.Drawing.Point(220, 22);
             this.TitlePanelHeader.Size = new System.Drawing.Size(277, 25);
 

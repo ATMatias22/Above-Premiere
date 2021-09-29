@@ -1,4 +1,5 @@
 ﻿using Above_Premiere.Modelo;
+using Above_Premiere.View.OptionPanels;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -13,6 +14,7 @@ namespace Above_Premiere.View
         User userLogin;
         FrameLogin mainView;
         bool isBtnLogout;
+        OptionPanel op;
 
 
         public ViewApplicationMenu(User userLogin, FrameLogin mainView)
@@ -40,6 +42,10 @@ namespace Above_Premiere.View
             this.choosenPanel.Visible = true;
         }
 
+        private void setOptionPanel()
+        {
+
+        }
 
         private void setPathInTextBox(TextBox tb)
         {
@@ -69,7 +75,8 @@ namespace Above_Premiere.View
 
         private void ButtonOptionOne_Click(object sender, EventArgs e)
         {
-            setPanel(this.PanelBodyChoosenOptionOne);
+            MessageBox.Show("hola");
+            new ChangeFormatToVideoOptionPanel();
         }
 
         private void ButtonOptionTwo_Click(object sender, EventArgs e)
@@ -109,8 +116,8 @@ namespace Above_Premiere.View
                 MessageBox.Show("Archivo convertido con exito", "Listo");
             }
 
-            this.TextBoxPathVideoChoosenOptionOne.Text = "";
-            this.TextBoxNewNameChoosenOptionOne.Text = "";
+            /*this.TextBoxPathVideoChoosenOptionOne.Text = "";
+            this.TextBoxNewNameChoosenOptionOne.Text = "";*/
         }
 
 
@@ -177,7 +184,7 @@ namespace Above_Premiere.View
             }
         }
 
-        private void ButtonExecuteChoosenOptionOne_Click(object sender, EventArgs e)
+       /* private void ButtonExecuteChoosenOptionOne_Click(object sender, EventArgs e)
         {
             string selectedItem = ComboBoxVideoFormatChoosenOptionOne.SelectedItem.ToString();
             try
@@ -190,15 +197,12 @@ namespace Above_Premiere.View
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }*/
 
 
 
 
-        private void ButtonSearchVideoChoosenOptionOne_Click(object sender, EventArgs e)
-        {
-            setPathInTextBox(TextBoxPathVideoChoosenOptionOne);
-        }
+    
 
         private void ButtonSearchVideoChoosenOptionTwo_Click(object sender, EventArgs e)
         {
