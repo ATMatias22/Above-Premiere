@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Above_Premiere.View.OptionPanels
@@ -10,6 +6,8 @@ namespace Above_Premiere.View.OptionPanels
     public class ExtractImagesFromVideoEveryXFrames: OptionPanel
     {
         const string TITLE = "Extraer imagesnes del video cada X frames";
+        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Extraccion de imagenes exitosa";
+
         private Label LabelTextBoxNumberOfPhotos;
         private TextBox TextBoxNumberOfPhotos;
 
@@ -84,6 +82,20 @@ namespace Above_Premiere.View.OptionPanels
 
 
 
+        }
+
+        protected override void ButtonExecute_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string savePath = path();
+                string command = $"/c ffmpeg -i {this.TextBoxPathVideo.Text} -y -an -r {this.TextBoxNumberOfPhotos.Text} {savePath}\\{this.TextBoxNewName.Text}%d.png";
+                executeCommand(command, SUCCESSFUL_FUNCTIONALITY_MESSAGE);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

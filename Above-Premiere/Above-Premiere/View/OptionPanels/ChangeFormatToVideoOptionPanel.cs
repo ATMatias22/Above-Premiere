@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Windows.Forms;
 
 namespace Above_Premiere.View.OptionPanels
@@ -6,6 +7,8 @@ namespace Above_Premiere.View.OptionPanels
     public class ChangeFormatToVideoOptionPanel : OptionPanel
     {
         const string TITLE = "Cambiar formato a un video";
+        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE  = "Conversion exitosa";
+
         private Label LabelComboBox;
         private ComboBox ComboBoxVideoFormat;
 
@@ -67,6 +70,7 @@ namespace Above_Premiere.View.OptionPanels
             this.ComboBoxVideoFormat.Location = new System.Drawing.Point(388, 99);
             this.ComboBoxVideoFormat.Size = new System.Drawing.Size(165, 26);
             this.ComboBoxVideoFormat.TabIndex = 3;
+            this.ComboBoxVideoFormat.SelectedIndex = 0;
 
 
             this.TextBoxNewName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,7 +89,20 @@ namespace Above_Premiere.View.OptionPanels
 
         }
 
-
-     
+        protected override void ButtonExecute_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string selectedItem = this.ComboBoxVideoFormat.SelectedItem.ToString();
+                string savePath = path();
+                string command = $"/c ffmpeg -i {this.TextBoxPathVideo.Text} {savePath}\\{this.TextBoxNewName.Text}.{selectedItem}";
+                executeCommand(command,SUCCESSFUL_FUNCTIONALITY_MESSAGE);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        
+        }
     }
 }

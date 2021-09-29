@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Above_Premiere.View.OptionPanels
 {
     public class RemoveAudioFromAVideo : OptionPanel
     {
         const string TITLE = "Remover el audio de un video";
+        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Extraccion exitosa";
 
 
         public RemoveAudioFromAVideo() : base(TITLE)
@@ -60,6 +59,21 @@ namespace Above_Premiere.View.OptionPanels
 
 
 
+        }
+
+        protected override void ButtonExecute_Click(object sender, EventArgs e)
+        {
+            string extension = Path.GetExtension($@"{this.TextBoxPathVideo.Text}");
+            try
+            {
+                string savePath = path();
+                string command = $"/c ffmpeg -i {this.TextBoxPathVideo.Text} -c copy -an {savePath}\\{this.TextBoxNewName.Text}{extension}";
+                executeCommand(command, SUCCESSFUL_FUNCTIONALITY_MESSAGE);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

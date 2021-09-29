@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Above_Premiere.View.OptionPanels
@@ -11,6 +9,8 @@ namespace Above_Premiere.View.OptionPanels
     {
 
         const string TITLE = "Cambiar la resolucion de un video";
+        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Cambio de resolucion exitosa";
+
         private Label LabelTextBoxHeight;
         private TextBox TextBoxHeight;
         private Label LabelTextBoxWidth;
@@ -23,7 +23,6 @@ namespace Above_Premiere.View.OptionPanels
             this.LabelTextBoxWidth = new Label();
             this.TextBoxWidth = new TextBox();
             setOwnStyles();
-
         }
 
         public override void setOwnStyles()
@@ -102,6 +101,19 @@ namespace Above_Premiere.View.OptionPanels
 
         }
 
-
+        protected override void ButtonExecute_Click(object sender, EventArgs e)
+        {
+            string extension = Path.GetExtension($@"{this.TextBoxPathVideo.Text}");
+            try
+            {
+                string savePath = path();
+                string command = $"/c ffmpeg -i {this.TextBoxPathVideo.Text} -s {this.TextBoxWidth.Text}x{this.TextBoxHeight.Text} {savePath}\\{this.TextBoxNewName.Text}{extension}";
+                executeCommand(command, SUCCESSFUL_FUNCTIONALITY_MESSAGE);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

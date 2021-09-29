@@ -1,11 +1,15 @@
 ﻿
+using System;
+using System.Windows.Forms;
 
 namespace Above_Premiere.View.OptionPanels
 {
     public class ExtractAudioFromVideoToMp3OptionPanel : OptionPanel
     {
         const string TITLE = "Extraer el audio de un video en formato .mp3";
-     
+        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Eliminacion de audio exitosa";
+
+
         public ExtractAudioFromVideoToMp3OptionPanel() : base(TITLE)
         {
             setOwnStyles();
@@ -55,5 +59,18 @@ namespace Above_Premiere.View.OptionPanels
 
         }
 
+        protected override void ButtonExecute_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string savePath = path();
+                string command = $"/c ffmpeg -i {this.TextBoxPathVideo.Text} -vn -acodec mp3 {savePath}\\{this.TextBoxNewName.Text}.mp3";
+                executeCommand(command, SUCCESSFUL_FUNCTIONALITY_MESSAGE);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
