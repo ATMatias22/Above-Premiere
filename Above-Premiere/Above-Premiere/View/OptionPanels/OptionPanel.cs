@@ -35,6 +35,8 @@ namespace Above_Premiere.View.OptionPanels
             openFileDialog1 = new OpenFileDialog();
 
             setStyles();
+            this.Show();
+
         }
 
         public void setStyles()
@@ -42,11 +44,9 @@ namespace Above_Premiere.View.OptionPanels
             this.Controls.Add(HeaderPanel);
             this.Controls.Add(BodyPanel);
 
-           
 
-
-            this.Location = new System.Drawing.Point(0, 90);
-            this.Size = new System.Drawing.Size(900, 360);
+            this.Location = new System.Drawing.Point(176, 0);
+            this.Size = new System.Drawing.Size(728, 360);
             this.TabIndex = 1;
 
 

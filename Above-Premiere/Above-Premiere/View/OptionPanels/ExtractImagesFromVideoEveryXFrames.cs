@@ -1,29 +1,35 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Above_Premiere.View.OptionPanels
 {
-    public class ChangeFormatToVideoOptionPanel : OptionPanel
+    public class ExtractImagesFromVideoEveryXFrames: OptionPanel
     {
-        const string TITLE = "Cambiar formato a un video";
-        private Label LabelComboBox;
-        private ComboBox ComboBoxVideoFormat;
+        const string TITLE = "Extraer imagesnes del video cada X frames";
+        private Label LabelTextBoxNumberOfPhotos;
+        private TextBox TextBoxNumberOfPhotos;
 
-        public ChangeFormatToVideoOptionPanel() : base(TITLE)
+        public ExtractImagesFromVideoEveryXFrames() : base(TITLE)
         {
-            this.LabelComboBox = new Label();
-            this.ComboBoxVideoFormat = new ComboBox();
+            this.LabelTextBoxNumberOfPhotos = new Label();
+            this.TextBoxNumberOfPhotos = new TextBox();
             setOwnStyles();
 
         }
 
         public override void setOwnStyles()
         {
-            this.BodyPanel.Controls.Add(LabelComboBox);
-            this.BodyPanel.Controls.Add(ComboBoxVideoFormat);
+            this.BodyPanel.Controls.Add(LabelTextBoxNumberOfPhotos);
+            this.BodyPanel.Controls.Add(TextBoxNumberOfPhotos);
 
-            this.TitlePanelHeader.Location = new System.Drawing.Point(220, 22);
-            this.TitlePanelHeader.Size = new System.Drawing.Size(277, 25);
+            this.TitlePanelHeader.Location = new System.Drawing.Point(141, 22);
+            this.TitlePanelHeader.Size = new System.Drawing.Size(429, 25);
+
+         
 
             this.TextBoxPathVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxPathVideo.Location = new System.Drawing.Point(177, 27);
@@ -44,29 +50,23 @@ namespace Above_Premiere.View.OptionPanels
             this.LabelTextBoxNewName.AutoSize = true;
             this.LabelTextBoxNewName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelTextBoxNewName.Location = new System.Drawing.Point(110, 149);
-            this.LabelTextBoxNewName.Size = new System.Drawing.Size(251, 36);
+            this.LabelTextBoxNewName.Size = new System.Drawing.Size(239, 36);
             this.LabelTextBoxNewName.TabIndex = 4;
-            this.LabelTextBoxNewName.Text = "Coloque el nombre que quiera \r\nque tenga el video a transformar";
-
-            this.LabelComboBox.AutoSize = true;
-            this.LabelComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelComboBox.Location = new System.Drawing.Point(110, 102);
-            this.LabelComboBox.Size = new System.Drawing.Size(238, 18);
-            this.LabelComboBox.TabIndex = 2;
-            this.LabelComboBox.Text = "Seleccione formato que quiera";
+            this.LabelTextBoxNewName.Text = "Coloque el nombre que quiera \nponerle a cada imagen";
 
 
-            this.ComboBoxVideoFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBoxVideoFormat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBoxVideoFormat.FormattingEnabled = true;
-            this.ComboBoxVideoFormat.Items.AddRange(new object[] {
-            "mp4",
-            "avi",
-            "mpeg",
-            "flv"});
-            this.ComboBoxVideoFormat.Location = new System.Drawing.Point(388, 99);
-            this.ComboBoxVideoFormat.Size = new System.Drawing.Size(165, 26);
-            this.ComboBoxVideoFormat.TabIndex = 3;
+            this.LabelTextBoxNumberOfPhotos.AutoSize = true;
+            this.LabelTextBoxNumberOfPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTextBoxNumberOfPhotos.Location = new System.Drawing.Point(110, 102);
+            this.LabelTextBoxNumberOfPhotos.Size = new System.Drawing.Size(240, 18);
+            this.LabelTextBoxNumberOfPhotos.TabIndex = 2;
+            this.LabelTextBoxNumberOfPhotos.Text = "Cantidad de fotos por segundo";
+
+
+            this.TextBoxNumberOfPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxNumberOfPhotos.Location = new System.Drawing.Point(388, 94);
+            this.TextBoxNumberOfPhotos.Size = new System.Drawing.Size(58, 26);
+            this.TextBoxNumberOfPhotos.TabIndex = 7;
 
 
             this.TextBoxNewName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,18 +74,16 @@ namespace Above_Premiere.View.OptionPanels
             this.TextBoxNewName.Size = new System.Drawing.Size(251, 26);
             this.TextBoxNewName.TabIndex = 5;
 
+        
 
             this.ButtonExecute.Location = new System.Drawing.Point(282, 233);
             this.ButtonExecute.Size = new System.Drawing.Size(146, 25);
             this.ButtonExecute.TabIndex = 6;
-            this.ButtonExecute.Text = "Convetir";
+            this.ButtonExecute.Text = "Extraer";
             this.ButtonExecute.UseVisualStyleBackColor = true;
 
 
 
         }
-
-
-     
     }
 }

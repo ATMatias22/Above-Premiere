@@ -58,7 +58,19 @@
     <Compile Include="View\OptionPanels\ChangeFormatToVideoOptionPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="View\OptionPanels\ChangeTheResolutionOfAVideo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\OptionPanels\ExtractAudioFromVideoToMp3OptionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\OptionPanels\ExtractImagesFromVideoEveryXFrames.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\OptionPanels\OptionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\OptionPanels\RemoveAudioFromAVideo.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\ViewApplicationMenu.cs">
