@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,8 @@ namespace Above_Premiere.Modelo
             this.password = password;
         }
 
-        public string Name { get => name;  }
-        public string Password { get => password;  }
+        public string Name { get => name; set => name = value; }
+        public string Password { get => password; set => password = value; }
+
     }
 }

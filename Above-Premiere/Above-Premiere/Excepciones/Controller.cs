@@ -1,5 +1,8 @@
 ﻿using Above_Premiere.Modelo;
 using Above_Premiere.View;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using RestSharp;
 using System;
 
 using System.Windows.Forms;
@@ -7,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Above_Premiere.Excepciones
 {
-    public  class Controller
+    public class Controller
     {
         FrameLogin mainView;
-        UserDAO userDAO;
-
-
-
         public void start()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             mainView = new FrameLogin();
-            userDAO = new UserDAO();
             mainView.addEventClickBtnLogin(handlerBtnLogin);
             Application.Run(mainView);
         }
@@ -27,17 +25,23 @@ namespace Above_Premiere.Excepciones
 
         private void loginUser()
         {
-            try
+            var client = new RestClient("http://localhost:40100");
+            var request = new RestRequest("/api/check", Method.POST);
+            request.AddJsonBody(new { Name = mainView.getTextBoxUserName(), Password = mainView.getTextBoxPassword() });
+            var response = client.Execute(request);
+            var obj = JObject.Parse(response.Content);
+
+            if ((bool)obj["valid"])
             {
-                User userLoggedIn = userDAO.loginUser(mainView.getTextBoxUserName(), mainView.getTextBoxPassword());
-                mainView.showMessage("Log in", "Log in");
+                User user = JsonConvert.DeserializeObject<User>(obj["user"].ToString());
+                mainView.showMessage(obj["message"].ToString(), "Log in");
                 mainView.hideView();
-                new ViewApplicationMenu(userLoggedIn,mainView);
+                new ViewApplicationMenu(user, mainView);
                 mainView.clearCredentials();
             }
-            catch (IncorrectCredentialsException ice)
+            else
             {
-                mainView.showMessageError(ice.Message, "Error en las credenciales");
+                mainView.showMessageError(obj["message"].ToString(), obj["title"].ToString());
             }
         }
 
