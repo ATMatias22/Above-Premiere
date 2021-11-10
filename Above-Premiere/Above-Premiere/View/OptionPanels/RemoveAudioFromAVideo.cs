@@ -6,8 +6,8 @@ namespace Above_Premiere.View.OptionPanels
 {
     public class RemoveAudioFromAVideo : OptionPanel
     {
-        const string TITLE = "Remover el audio de un video";
-        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Extraccion exitosa";
+        const string TITLE = "Remove audio from a video";
+        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Successful extraction";
 
 
         public RemoveAudioFromAVideo() : base(TITLE)
@@ -43,7 +43,7 @@ namespace Above_Premiere.View.OptionPanels
             this.LabelTextBoxNewName.Location = new System.Drawing.Point(100, 121);
             this.LabelTextBoxNewName.Size = new System.Drawing.Size(239, 36);
             this.LabelTextBoxNewName.TabIndex = 4;
-            this.LabelTextBoxNewName.Text = "Coloque el nombre que quiera \r\nque tenga el video sin audio";
+            this.LabelTextBoxNewName.Text = "Place the name you want \r\nthe video to have without audio";
 
 
             this.TextBoxNewName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -54,7 +54,7 @@ namespace Above_Premiere.View.OptionPanels
             this.ButtonExecute.Location = new System.Drawing.Point(282, 233);
             this.ButtonExecute.Size = new System.Drawing.Size(146, 25);
             this.ButtonExecute.TabIndex = 6;
-            this.ButtonExecute.Text = "Remover audio";
+            this.ButtonExecute.Text = "Remove audio";
             this.ButtonExecute.UseVisualStyleBackColor = true;
 
 

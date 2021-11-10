@@ -8,7 +8,7 @@ using System;
 using System.Windows.Forms;
 
 
-namespace Above_Premiere.Excepciones
+namespace Above_Premiere.Controller
 {
     public class Controller
     {
@@ -30,11 +30,10 @@ namespace Above_Premiere.Excepciones
             request.AddJsonBody(new { Name = mainView.getTextBoxUserName(), Password = mainView.getTextBoxPassword() });
             var response = client.Execute(request);
             var obj = JObject.Parse(response.Content);
-
             if ((bool)obj["valid"])
             {
                 User user = JsonConvert.DeserializeObject<User>(obj["user"].ToString());
-                mainView.showMessage(obj["message"].ToString(), "Log in");
+                mainView.showMessage(obj["message"].ToString(), obj["title"].ToString());
                 mainView.hideView();
                 new ViewApplicationMenu(user, mainView);
                 mainView.clearCredentials();
@@ -44,7 +43,6 @@ namespace Above_Premiere.Excepciones
                 mainView.showMessageError(obj["message"].ToString(), obj["title"].ToString());
             }
         }
-
 
         private void handlerBtnLogin(object sender, EventArgs e)
         {

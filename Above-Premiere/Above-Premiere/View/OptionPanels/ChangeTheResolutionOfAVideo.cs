@@ -8,8 +8,8 @@ namespace Above_Premiere.View.OptionPanels
     public class ChangeTheResolutionOfAVideo : OptionPanel
     {
 
-        const string TITLE = "Cambiar la resolucion de un video";
-        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Cambio de resolucion exitosa";
+        const string TITLE = "Change the resolution of a video";
+        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Successful resolution change";
 
         private Label LabelTextBoxHeight;
         private TextBox TextBoxHeight;
@@ -57,7 +57,7 @@ namespace Above_Premiere.View.OptionPanels
             this.LabelTextBoxNewName.Location = new System.Drawing.Point(94, 159);
             this.LabelTextBoxNewName.Size = new System.Drawing.Size(269, 36);
             this.LabelTextBoxNewName.TabIndex = 4;
-            this.LabelTextBoxNewName.Text = "Coloque el nombre que quiera \nque tenga el video redimencionado";
+            this.LabelTextBoxNewName.Text = "Place the name you want\nthe resized video to have";
 
 
             this.TextBoxNewName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -69,15 +69,15 @@ namespace Above_Premiere.View.OptionPanels
             this.ButtonExecute.Location = new System.Drawing.Point(282, 233);
             this.ButtonExecute.Size = new System.Drawing.Size(146, 25);
             this.ButtonExecute.TabIndex = 6;
-            this.ButtonExecute.Text = "Convetir";
+            this.ButtonExecute.Text = "Convert";
             this.ButtonExecute.UseVisualStyleBackColor = true;
 
             this.LabelTextBoxHeight.AutoSize = true;
             this.LabelTextBoxHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTextBoxHeight.Location = new System.Drawing.Point(502, 28);
-            this.LabelTextBoxHeight.Size = new System.Drawing.Size(53, 25);
+            this.LabelTextBoxHeight.Location = new System.Drawing.Point(480, 28);
+            this.LabelTextBoxHeight.Size = new System.Drawing.Size(78, 25);
             this.LabelTextBoxHeight.TabIndex = 7;
-            this.LabelTextBoxHeight.Text = "Alto";
+            this.LabelTextBoxHeight.Text = "Height";
 
             this.TextBoxHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxHeight.Location = new System.Drawing.Point(572, 27);
@@ -90,7 +90,7 @@ namespace Above_Premiere.View.OptionPanels
             this.LabelTextBoxWidth.Location = new System.Drawing.Point(488, 78);
             this.LabelTextBoxWidth.Size = new System.Drawing.Size(78, 25);
             this.LabelTextBoxWidth.TabIndex = 9;
-            this.LabelTextBoxWidth.Text = "Ancho";
+            this.LabelTextBoxWidth.Text = "Width";
 
             this.TextBoxWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxWidth.Location = new System.Drawing.Point(572, 78);

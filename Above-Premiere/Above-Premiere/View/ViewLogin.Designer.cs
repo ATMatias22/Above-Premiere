@@ -63,7 +63,7 @@ namespace Above_Premiere
             this.panelPrinciapl.TabIndex = 1;
             // 
             // btnTogglePassword
-            //
+            // 
             this.btnTogglePassword.Image = global::Above_Premiere.Properties.Resources.invisible_eye;
             this.btnTogglePassword.Location = new System.Drawing.Point(298, 232);
             this.btnTogglePassword.Name = "btnTogglePassword";
@@ -104,11 +104,11 @@ namespace Above_Premiere
             // 
             this.labelUser.AutoSize = true;
             this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUser.Location = new System.Drawing.Point(156, 76);
+            this.labelUser.Location = new System.Drawing.Point(150, 77);
             this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(71, 20);
+            this.labelUser.Size = new System.Drawing.Size(91, 20);
             this.labelUser.TabIndex = 1;
-            this.labelUser.Text = "Usuario";
+            this.labelUser.Text = "Username";
             // 
             // FrameLogin
             // 

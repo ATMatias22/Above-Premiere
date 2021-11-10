@@ -5,8 +5,8 @@ namespace Above_Premiere.View.OptionPanels
 {
     public class ExtractImagesFromVideoEveryXFrames: OptionPanel
     {
-        const string TITLE = "Extraer imagesnes del video cada X frames";
-        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Extraccion de imagenes exitosa";
+        const string TITLE = "Extract images from the video every X frames";
+        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Image extraction successful";
 
         private Label LabelTextBoxNumberOfPhotos;
         private TextBox TextBoxNumberOfPhotos;
@@ -50,7 +50,7 @@ namespace Above_Premiere.View.OptionPanels
             this.LabelTextBoxNewName.Location = new System.Drawing.Point(110, 149);
             this.LabelTextBoxNewName.Size = new System.Drawing.Size(239, 36);
             this.LabelTextBoxNewName.TabIndex = 4;
-            this.LabelTextBoxNewName.Text = "Coloque el nombre que quiera \nponerle a cada imagen";
+            this.LabelTextBoxNewName.Text = "Place the name you want \nto give to each image";
 
 
             this.LabelTextBoxNumberOfPhotos.AutoSize = true;
@@ -58,7 +58,7 @@ namespace Above_Premiere.View.OptionPanels
             this.LabelTextBoxNumberOfPhotos.Location = new System.Drawing.Point(110, 102);
             this.LabelTextBoxNumberOfPhotos.Size = new System.Drawing.Size(240, 18);
             this.LabelTextBoxNumberOfPhotos.TabIndex = 2;
-            this.LabelTextBoxNumberOfPhotos.Text = "Cantidad de fotos por segundo";
+            this.LabelTextBoxNumberOfPhotos.Text = "Number of photos per second";
 
 
             this.TextBoxNumberOfPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -77,7 +77,7 @@ namespace Above_Premiere.View.OptionPanels
             this.ButtonExecute.Location = new System.Drawing.Point(282, 233);
             this.ButtonExecute.Size = new System.Drawing.Size(146, 25);
             this.ButtonExecute.TabIndex = 6;
-            this.ButtonExecute.Text = "Extraer";
+            this.ButtonExecute.Text = "Extract";
             this.ButtonExecute.UseVisualStyleBackColor = true;
 
 

@@ -6,8 +6,8 @@ namespace Above_Premiere.View.OptionPanels
 {
     public class ExtractAudioFromVideoToMp3OptionPanel : OptionPanel
     {
-        const string TITLE = "Extraer el audio de un video en formato .mp3";
-        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Eliminacion de audio exitosa";
+        const string TITLE = "Extract audio from video in .mp3";
+        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE = "Successful Audio Removal";
 
 
         public ExtractAudioFromVideoToMp3OptionPanel() : base(TITLE)
@@ -18,7 +18,7 @@ namespace Above_Premiere.View.OptionPanels
         public override void setOwnStyles()
         {
 
-            this.TitlePanelHeader.Location = new System.Drawing.Point(133, 22);
+            this.TitlePanelHeader.Location = new System.Drawing.Point(200, 22);
             this.TitlePanelHeader.Size = new System.Drawing.Size(442, 25);
 
 
@@ -42,7 +42,7 @@ namespace Above_Premiere.View.OptionPanels
             this.LabelTextBoxNewName.Location = new System.Drawing.Point(100, 121);
             this.LabelTextBoxNewName.Size = new System.Drawing.Size(239, 36);
             this.LabelTextBoxNewName.TabIndex = 4;
-            this.LabelTextBoxNewName.Text = "Coloque el nombre que quiera \r\nque tenga el archivo .mp3";
+            this.LabelTextBoxNewName.Text = "Put whatever name you want \r\nthe .mp3 file to have";
 
             this.TextBoxNewName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxNewName.Location = new System.Drawing.Point(378, 131);
@@ -52,7 +52,7 @@ namespace Above_Premiere.View.OptionPanels
             this.ButtonExecute.Location = new System.Drawing.Point(282, 233);
             this.ButtonExecute.Size = new System.Drawing.Size(146, 25);
             this.ButtonExecute.TabIndex = 6;
-            this.ButtonExecute.Text = "Extraer";
+            this.ButtonExecute.Text = "Extract";
             this.ButtonExecute.UseVisualStyleBackColor = true;
 
 

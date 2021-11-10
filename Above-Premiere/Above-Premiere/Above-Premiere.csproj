@@ -53,7 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Excepciones\Controller.cs" />
+    <Compile Include="Controller\Controller.cs" />
     <Compile Include="Excepciones\IncorrectCredentialsException.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

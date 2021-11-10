@@ -116,7 +116,7 @@ namespace Above_Premiere.View.OptionPanels
             }
             else
             {
-                throw new SystemException("Cancelaste la accion");
+                throw new SystemException("You canceled the action");
             }
             return path;
         }
@@ -133,7 +133,7 @@ namespace Above_Premiere.View.OptionPanels
             using (Process exeProcess = Process.Start(startInfo))
             {
                 exeProcess.WaitForExit();
-                MessageBox.Show(successfulMesagge, "Listo");
+                MessageBox.Show(successfulMesagge, "completed");
             }
 
             this.TextBoxPathVideo.Text = "";

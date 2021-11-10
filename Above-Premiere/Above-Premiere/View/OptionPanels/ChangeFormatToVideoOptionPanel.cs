@@ -6,8 +6,8 @@ namespace Above_Premiere.View.OptionPanels
 {
     public class ChangeFormatToVideoOptionPanel : OptionPanel
     {
-        const string TITLE = "Cambiar formato a un video";
-        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE  = "Conversion exitosa";
+        const string TITLE = "Change the format to a video";
+        const string SUCCESSFUL_FUNCTIONALITY_MESSAGE  = "Successful conversion";
 
         private Label LabelComboBox;
         private ComboBox ComboBoxVideoFormat;
@@ -49,14 +49,14 @@ namespace Above_Premiere.View.OptionPanels
             this.LabelTextBoxNewName.Location = new System.Drawing.Point(110, 149);
             this.LabelTextBoxNewName.Size = new System.Drawing.Size(251, 36);
             this.LabelTextBoxNewName.TabIndex = 4;
-            this.LabelTextBoxNewName.Text = "Coloque el nombre que quiera \r\nque tenga el video a transformar";
+            this.LabelTextBoxNewName.Text = "Place the name you want \r\nthe video to have to transform";
 
             this.LabelComboBox.AutoSize = true;
             this.LabelComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelComboBox.Location = new System.Drawing.Point(110, 102);
             this.LabelComboBox.Size = new System.Drawing.Size(238, 18);
             this.LabelComboBox.TabIndex = 2;
-            this.LabelComboBox.Text = "Seleccione formato que quiera";
+            this.LabelComboBox.Text = "Select format you want";
 
 
             this.ComboBoxVideoFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -82,7 +82,7 @@ namespace Above_Premiere.View.OptionPanels
             this.ButtonExecute.Location = new System.Drawing.Point(282, 233);
             this.ButtonExecute.Size = new System.Drawing.Size(146, 25);
             this.ButtonExecute.TabIndex = 6;
-            this.ButtonExecute.Text = "Convetir";
+            this.ButtonExecute.Text = "Convert";
             this.ButtonExecute.UseVisualStyleBackColor = true;
 
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Above_Premiere.Modelo
 {
@@ -21,5 +22,6 @@ namespace Above_Premiere.Modelo
         public string Name { get => name; set => name = value; }
         public string Password { get => password; set => password = value; }
 
+      
     }
 }

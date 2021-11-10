@@ -108,7 +108,7 @@ namespace Above_Premiere.View
             this.LabelHeaderTitle.Name = "LabelHeaderTitle";
             this.LabelHeaderTitle.Size = new System.Drawing.Size(398, 50);
             this.LabelHeaderTitle.TabIndex = 0;
-            this.LabelHeaderTitle.Text = "Bienvenidos a la aplicacion desktop \r\n nombre de usuario";
+            this.LabelHeaderTitle.Text = "Welcome to the desktop application \r\n username";
             this.LabelHeaderTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // PanelBody
@@ -139,7 +139,7 @@ namespace Above_Premiere.View
             this.ButtonOptionFive.Name = "ButtonOptionFive";
             this.ButtonOptionFive.Size = new System.Drawing.Size(169, 66);
             this.ButtonOptionFive.TabIndex = 4;
-            this.ButtonOptionFive.Text = "Extraer imagenes del video\n cada X frames";
+            this.ButtonOptionFive.Text = "Extract images from video\nevery X frames";
             this.ButtonOptionFive.UseVisualStyleBackColor = true;
             this.ButtonOptionFive.Click += new System.EventHandler(this.ButtonOptionFive_Click);
             // 
@@ -150,7 +150,7 @@ namespace Above_Premiere.View
             this.ButtonOptionFour.Name = "ButtonOptionFour";
             this.ButtonOptionFour.Size = new System.Drawing.Size(169, 66);
             this.ButtonOptionFour.TabIndex = 3;
-            this.ButtonOptionFour.Text = "Cambiar la resolución \nde un video";
+            this.ButtonOptionFour.Text = "Change resolution \nfrom a video";
             this.ButtonOptionFour.UseVisualStyleBackColor = true;
             this.ButtonOptionFour.Click += new System.EventHandler(this.ButtonOptionFour_Click);
             // 
@@ -161,7 +161,7 @@ namespace Above_Premiere.View
             this.ButtonOptionThree.Name = "ButtonOptionThree";
             this.ButtonOptionThree.Size = new System.Drawing.Size(169, 66);
             this.ButtonOptionThree.TabIndex = 2;
-            this.ButtonOptionThree.Text = "\tRemover el audio de un video";
+            this.ButtonOptionThree.Text = "\tRemove audio from a video";
             this.ButtonOptionThree.UseVisualStyleBackColor = true;
             this.ButtonOptionThree.Click += new System.EventHandler(this.ButtonOptionThree_Click);
             // 
@@ -172,7 +172,7 @@ namespace Above_Premiere.View
             this.ButtonOptionTwo.Name = "ButtonOptionTwo";
             this.ButtonOptionTwo.Size = new System.Drawing.Size(169, 66);
             this.ButtonOptionTwo.TabIndex = 1;
-            this.ButtonOptionTwo.Text = "Extraer el audio de un video \r\nen formato .mp3";
+            this.ButtonOptionTwo.Text = "Extract audio from video  \r\nin .mp3 format";
             this.ButtonOptionTwo.UseVisualStyleBackColor = true;
             this.ButtonOptionTwo.Click += new System.EventHandler(this.ButtonOptionTwo_Click);
             // 
@@ -183,7 +183,7 @@ namespace Above_Premiere.View
             this.ButtonOptionOne.Name = "ButtonOptionOne";
             this.ButtonOptionOne.Size = new System.Drawing.Size(169, 66);
             this.ButtonOptionOne.TabIndex = 0;
-            this.ButtonOptionOne.Text = "Cambiar Formato a un video";
+            this.ButtonOptionOne.Text = "Change the format to a video";
             this.ButtonOptionOne.UseVisualStyleBackColor = true;
             this.ButtonOptionOne.Click += new System.EventHandler(this.ButtonOptionOne_Click);
             // 

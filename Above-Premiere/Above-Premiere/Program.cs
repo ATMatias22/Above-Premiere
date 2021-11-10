@@ -1,4 +1,5 @@
-﻿using Above_Premiere.Excepciones;
+﻿using Above_Premiere.Controller;
+using Above_Premiere.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,8 @@ namespace Above_Premiere
         static void Main()
         {
 
-            Controller c = new Controller();
+            Controller.Controller c = new Controller.Controller();
             c.start();
-       
         }
     }
 }

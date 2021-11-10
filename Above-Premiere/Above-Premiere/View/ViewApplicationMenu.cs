@@ -28,7 +28,7 @@ namespace Above_Premiere.View
 
         private void setTitleHeader()
         {
-            this.LabelHeaderTitle.Text = $"Bienvenidos a la aplicacion desktop \n {userLogin.Name}";
+            this.LabelHeaderTitle.Text = $"Welcome to the desktop application \n {userLogin.Name}";
         }
 
         private void setPanel(OptionPanel optionPanel)
@@ -72,8 +72,8 @@ namespace Above_Premiere.View
         {
             if (!this.isBtnLogout)
             {
-                DialogResult dialogo = MessageBox.Show("¿Está seguro de cerrar la aplicacion?",
-                    "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dialogo = MessageBox.Show("Are you sure to close the application?",
+                    "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (dialogo == DialogResult.No)
                 {
